@@ -50,7 +50,7 @@ export default function DataGlobe() {
     <group>
       <points ref={pointsRef}>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" array={points} count={points.length / 3} itemSize={3} />
+          <bufferAttribute attach="attributes-position" args={[points, 3]} />
         </bufferGeometry>
         <pointsMaterial size={0.035} color="#3CF2FF" transparent opacity={ready ? 0.85 : 0} />
       </points>
