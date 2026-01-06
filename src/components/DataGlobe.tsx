@@ -57,7 +57,7 @@ export default function DataGlobe() {
 
       <lineSegments ref={linesRef}>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" array={lines} count={lines.length / 3} itemSize={3} />
+          <bufferAttribute attach="attributes-position" args={[lines, 3]} />
         </bufferGeometry>
         <lineBasicMaterial color="#7C7CFF" transparent opacity={ready ? 0.18 : 0} />
       </lineSegments>
